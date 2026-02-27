@@ -1,25 +1,25 @@
-
 import { createClient } from '@supabase/supabase-js'
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
-
-// 1. Initialize Supabase
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
 
 export default async function AddStudentPage({ 
   params 
 }: { 
   params: Promise<{ semesterId: string }> 
 }) {
-  // 2. Await the promise (Next.js 15/16 Requirement)
+  // 1. Await the promise
   const { semesterId } = await params;
 
+  // 2. Server Action for the form
   async function handleAddStudent(formData: FormData) {
     "use server";
+    
+    // Initialize INSIDE the action so it only runs when the form is submitted
+    const supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    );
 
     const name = formData.get("studentName") as string;
     const rollId = formData.get("rollId") as string;
