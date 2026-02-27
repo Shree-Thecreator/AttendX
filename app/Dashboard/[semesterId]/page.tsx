@@ -1,10 +1,7 @@
 import { createClient } from '@supabase/supabase-js'
 import Link from 'next/link';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-);
+// REMOVED from here
 
 export const dynamic = 'force-dynamic';
 
@@ -13,8 +10,14 @@ export default async function SemesterDashboard({
 }: { 
   params: Promise<{ semesterId: string }> 
 }) {
-  // Fix for Next.js 15: await the params promise
+  // 1. Await the params promise
   const { semesterId } = await params;
+
+  // 2. Initialize Supabase INSIDE the component function
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
 
   const { data: students, error } = await supabase
     .from('students')
