@@ -74,10 +74,10 @@ export default function LandingPage() {
                     <GraduationCap className="text-white size-10" />
                   </div>
                   <h1 className="text-5xl font-black text-slate-900 tracking-tight sm:text-6xl">
-                    MCCS <span className="text-indigo-600">Portal</span>
+                    Chronos CS <span className="text-indigo-600">Portal</span>
                   </h1>
                   <p className="text-slate-500 text-lg font-medium max-w-lg mx-auto">
-                    The official Digital Register & Attendance System for Mankar College CS Department.
+                    The official Digital Register & Attendance System for our College CS Department.
                   </p>
                 </div>
 
@@ -118,7 +118,7 @@ export default function LandingPage() {
 
             {/* Footer */}
             <footer className="py-8 text-center text-slate-400 text-xs font-medium bg-white">
-              © 2026 Mankar College Computer Science Department
+              © 2026 Chronos Computer Science Department
             </footer>
           </motion.div>
         )}

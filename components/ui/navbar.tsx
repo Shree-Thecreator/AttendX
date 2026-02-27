@@ -23,7 +23,7 @@ export default function Navbar() {
               <Users className="text-white" size={20} />
             </div>
             <span className="text-xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-slate-900 to-slate-600 tracking-tight">
-              MCCS Portal
+              Chronos CS Portal
             </span>
           </div>
 

@@ -11,7 +11,7 @@ export function Features() {
                         Built for Modern Teaching
                     </h2>
                     <p className="mt-4 text-slate-500 max-w-2xl mx-auto font-medium">
-                        Streamline your classroom management at Mankar College with tools designed for speed and clarity.
+                        Streamline your classroom management at Chronos Cs with tools designed for speed and clarity.
                     </p>
                 </div>
                 <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16">
