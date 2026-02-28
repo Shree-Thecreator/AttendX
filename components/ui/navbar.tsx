@@ -26,13 +26,13 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           {/* Logo Section */}
           <Link href="/teacher" className="flex items-center gap-3 transition-transform hover:scale-105">
-            <div className="relative w-10 h-10 overflow-hidden rounded-xl shadow-indigo-200 shadow-lg border border-slate-200 bg-white">
+            <div className="relative w-11 h-11 overflow-hidden">
               <Image
-                src="/logo.png"
+                src="/icon.png"
                 alt="AttendX Logo"
-                width={48}
-                height={48}
-                className="w-full h-full object-cover"
+                width={44}
+                height={44}
+                className="w-full h-full object-contain"
                 priority
               />
             </div>
