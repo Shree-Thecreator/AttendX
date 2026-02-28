@@ -1,14 +1,14 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from '@supabase/supabase-js';
 import Link from 'next/link';
 
 // REMOVED from here
 
 export const dynamic = 'force-dynamic';
 
-export default async function SemesterDashboard({ 
-  params 
-}: { 
-  params: Promise<{ semesterId: string }> 
+export default async function SemesterDashboard({
+  params
+}: {
+  params: Promise<{ semesterId: string }>
 }) {
   // 1. Await the params promise
   const { semesterId } = await params;
@@ -38,7 +38,7 @@ export default async function SemesterDashboard({
     <div className="p-8 max-w-5xl mx-auto space-y-10">
       <div className="flex justify-between items-center border-b pb-4">
         <h1 className="text-3xl font-bold">Semester {semesterId} - Management</h1>
-        <Link 
+        <Link
           href={`/Dashboard/${semesterId}/add-student`}
           className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:bg-blue-700"
         >
@@ -61,7 +61,7 @@ export default async function SemesterDashboard({
                 <td className="p-4 font-mono">{student.roll_id}</td>
                 <td className="p-4">{student.name}</td>
                 <td className="p-4 flex justify-center gap-2">
-                   <Link 
+                  <Link
                     href={`/Dashboard/${semesterId}/attendance`}
                     className="bg-green-100 text-green-700 px-4 py-1 rounded-md text-sm font-bold hover:bg-green-200"
                   >
