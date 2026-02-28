@@ -24,26 +24,25 @@ export default function LandingPage() {
             className="fixed inset-0 z-[100] cursor-pointer"
             onClick={() => setShowIntro(false)}
           >
-            {/* The background animation only exists here */}
             <BeamsBackground intensity="strong" className="flex items-center justify-center">
               <div className="text-center space-y-6 relative z-10 px-4">
-        <motion.h1
-  initial={{ scale: 0.8, opacity: 0, filter: "blur(10px)" }}
-  animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
-  transition={{ delay: 0.3, duration: 1.2, ease: "easeOut" }}
-  className="text-7xl md:text-9xl font-black italic tracking-tighter bg-gradient-to-r from-sky-400 via-rose-500 to-violet-600 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(168,85,247,0.5)] animate-gradient-x"
-  style={{ backgroundSize: "200% 200%" }}
->
-  AttendX
-</motion.h1>
-            <motion.p
-           initial={{ opacity: 0, y: 10 }}
-             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="text-lg md:text-2xl font-light uppercase tracking-[0.3em] text-yellow-400/80"
-             >
-              Departmental <span className="font-bold text-sky-400">Attendance</span> System
-            </motion.p>
+                <motion.h1
+                  initial={{ scale: 0.8, opacity: 0, filter: "blur(10px)" }}
+                  animate={{ scale: 1, opacity: 1, filter: "blur(0px)" }}
+                  transition={{ delay: 0.3, duration: 1.2, ease: "easeOut" }}
+                  className="text-7xl md:text-9xl font-black italic tracking-tighter bg-gradient-to-r from-sky-400 via-rose-500 to-violet-600 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(168,85,247,0.5)] animate-gradient-x"
+                  style={{ backgroundSize: "200% 200%" }}
+                >
+                  AttendX
+                </motion.h1>
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1, duration: 1 }}
+                  className="text-lg md:text-2xl font-light uppercase tracking-[0.3em] text-yellow-400/80"
+                >
+                  Departmental <span className="font-bold text-sky-400">Attendance</span> System
+                </motion.p>
 
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -65,7 +64,7 @@ export default function LandingPage() {
             transition={{ duration: 0.5 }}
             className="flex flex-col bg-slate-50 min-h-screen"
           >
-            {/* Hero Section with original colors */}
+            {/* Hero Section */}
             <main className="grow flex flex-col items-center justify-center px-6 py-20">
               <div className="max-w-3xl w-full text-center space-y-8">
                 {/* Logo & Branding */}
@@ -116,9 +115,33 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Footer */}
-            <footer className="py-8 text-center text-slate-400 text-xs font-medium bg-white">
-              © 2026 Chronos Computer Science Department
+            {/* --- REPLACED FOOTER SECTION --- */}
+            <footer className="w-full bg-gradient-to-b from-indigo-950 to-slate-900 text-white border-t border-indigo-500/20">
+              <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col items-center">
+                <div className="flex items-center space-x-3 mb-6 group cursor-pointer">
+                  {/* Using your project logo path */}
+                  <div className="size-11 rounded-full overflow-hidden border-2 border-indigo-400 shadow-lg shadow-indigo-500/20">
+                    <img 
+                      alt="Chronos Logo" 
+                      className="object-cover h-full w-full"
+                      src="/chronos-logo.jpg" 
+                    />
+                  </div>
+                  <span className="text-xl font-black tracking-tighter">
+                    Chronos <span className="text-indigo-400">CS</span>
+                  </span>
+                </div>
+                <p className="text-center max-w-xl text-sm font-normal leading-relaxed text-slate-400 px-4">
+                  Empowering the Computer Science Department at Chronos Cs with 
+                  advanced digital management tools. Streamlining academic administration 
+                  through innovative software solutions.
+                </p>
+              </div>
+              <div className="border-t border-white/5 bg-black/20">
+                <div className="max-w-7xl mx-auto px-6 py-6 text-center text-[10px] sm:text-xs font-medium tracking-widest text-slate-500 uppercase">
+                  © 2026 Chronos Computer Science Department. All rights reserved.
+                </div>
+              </div>
             </footer>
           </motion.div>
         )}
